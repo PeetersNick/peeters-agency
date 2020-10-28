@@ -27,7 +27,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-source-graphql`,
     {
       resolve:`gatsby-source-graphql`,
       options:{
@@ -36,7 +35,6 @@ module.exports = {
         url:`http://peeters-agency.local/graphql`
       },
     },
-    `gatsby-plugin-google-fonts`,
     {
       resolve:`gatsby-plugin-google-fonts`,
       options:{
