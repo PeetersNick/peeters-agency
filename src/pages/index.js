@@ -16,9 +16,9 @@ const IndexPage = () => {
           homePageHeaderTitle,
           homePageHeaderPicture,
           homePageFeaturedArtists,
-        }
-      }
-    }
+        },
+      },
+    },
   } = useStaticQuery(graphql`
    query {
      wpcontent{
@@ -40,7 +40,7 @@ const IndexPage = () => {
           }
           homePageFeaturedArtists {
             ... on WPGraphql_Artist {
-              id
+              slug
               artist {
                 artistName
                 firstName
@@ -58,9 +58,6 @@ const IndexPage = () => {
                 }
               }
             }
-          }
-          homePageHeaderPicture {
-            altText
           }
         }
       }
@@ -89,7 +86,7 @@ const IndexPage = () => {
         <div className="artist-items">
           {homePageFeaturedArtists.map(({artist, slug}) => (
             <Artist to={`/${slug}`}>
-              <Image fluid={artist.profile.imageFile.childImageSharp.fluid} altText={artist.profile.altText}/>
+                
               <div className="artist-info">
                 <p>{artist.firstName} {artist.lastName}</p>
                 <p>{artist.artistName}</p>
@@ -102,5 +99,5 @@ const IndexPage = () => {
   </Layout>
   )
 }
-
+//  <Image fluid={artist.profile.imageFile.childImageSharp.fluid} alt={artist.profile.altText}/>
 export default IndexPage
