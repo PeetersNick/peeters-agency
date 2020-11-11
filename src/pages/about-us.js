@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
@@ -37,6 +37,7 @@ const AboutUsPage =() => {
     `)
 
     return(<Layout>
+      <SEO title="About Us"/>
       <Wrapper descriptionColor ={COLORS.PRIMARY}>
         <div className="banner">
           <Image fluid={aboutUsPageHeaderPicture.imageFile.childImageSharp.fluid} alt={aboutUsPageHeaderPicture.altText}/>
