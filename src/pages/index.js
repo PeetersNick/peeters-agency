@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
@@ -61,10 +61,10 @@ const IndexPage = () => {
           }
         }
       }
-     
     }
    }
-  `);
+`)
+
   return (
   <Layout>
     <SEO title="Home" />
